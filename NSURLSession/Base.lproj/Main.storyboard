@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6249" systemVersion="14B23" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6243"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,8 +16,29 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="FVD-J3-Ohi">
+                                <rect key="frame" x="66" y="299" width="468" height="2"/>
+                            </progressView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rCH-un-sIf">
+                                <rect key="frame" x="0.0" y="40" width="600" height="510"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.19215686269999999" green="0.82745098039999998" blue="0.69411764710000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="rCH-un-sIf" secondAttribute="trailing" id="2gl-dO-5Ln"/>
+                            <constraint firstAttribute="centerY" secondItem="FVD-J3-Ohi" secondAttribute="centerY" id="APJ-ZG-XjQ"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="rCH-un-sIf" secondAttribute="bottom" constant="50" id="F93-7N-GWx"/>
+                            <constraint firstItem="FVD-J3-Ohi" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="50" id="Ngj-74-dlr"/>
+                            <constraint firstItem="rCH-un-sIf" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="Ttg-aD-EYh"/>
+                            <constraint firstItem="rCH-un-sIf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="hB5-rV-zj4"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="FVD-J3-Ohi" secondAttribute="trailing" constant="50" id="wC7-pS-HoM"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="rCH-un-sIf" id="bXO-lj-VJ0"/>
+                        <outlet property="progressView" destination="FVD-J3-Ohi" id="Nzq-an-cmd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
